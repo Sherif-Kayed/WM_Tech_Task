@@ -27,7 +27,7 @@ export const getAddressInfo = createAction(GET_ADDRESS_INFO);
 // Payment Info
 export const setPaymentInfo = createAction(
     SET_PAYMENT_INFO,
-    props<{ data: { customerId: any, owner: string, iban: string } }>()
+    props<{ data: { customerId: number, owner: string, iban: string } }>() // change customerId to any to simulate error
 );
 export const getPaymentInfo = createAction(GET_PAYMENT_INFO);
 export const paymentRequestSuccess = createAction(

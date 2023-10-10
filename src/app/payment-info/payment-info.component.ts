@@ -42,7 +42,7 @@ export class PaymentInfoComponent {
     console.log(this.form);
     this.store.dispatch(setPaymentInfo({
       data: {
-        customerId: null,
+        customerId: Math.floor(Math.random() * 10) + 1, // change customerId to null to simulate error
         owner: this.form.value.owner!,
         iban: this.form.value.iban!
       }

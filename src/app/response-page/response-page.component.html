@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="col-8" *ngIf="isLoading$ | async">
+        <h1>Loading....</h1>
+    </div>
+    <div class="col-8" *ngIf="paymentDataId$ | async as paymentDataId">
+        <h2>Success</h2>
+        <h3>{{paymentDataId}}</h3>
+    </div>
+    <div class="col-8" *ngIf="error$ | async as error">
+        <h2>Error</h2>
+        <h3>{{error.message}}</h3>
+    </div>
+</div>

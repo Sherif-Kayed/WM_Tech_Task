@@ -13,13 +13,15 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { AddressInfoComponent } from './address-info/address-info.component';
 import { PaymentInfoComponent } from './payment-info/payment-info.component';
 import { PaymentInfoEffects } from './state/userInfo/userInfo.effects';
+import { ResponsePageComponent } from './response-page/response-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonalInfoComponent,
     AddressInfoComponent,
-    PaymentInfoComponent
+    PaymentInfoComponent,
+    ResponsePageComponent
   ],
   imports: [
     BrowserModule,

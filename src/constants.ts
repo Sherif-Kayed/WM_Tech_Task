@@ -13,3 +13,4 @@ export const PAYMENT_REQUEST_FAILURE = '[Registration] Payment Request Failure';
 export const PERSONAL_INFO_PAGE = 'personalInfo';
 export const ADDRESS_INFO_PAGE = 'addressInfo';
 export const PAYMENT_INFO_PAGE = 'paymentInfo';
+export const RESPONSE_PAGE = 'responsePage';

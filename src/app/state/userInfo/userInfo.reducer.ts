@@ -19,7 +19,8 @@ export interface UserInfoState {
         iban: string;
     },
     paymentDataId: string,
-    error: any
+    error: any,
+    loading: boolean
 }
 
 export const initialState: UserInfoState = {
@@ -40,14 +41,15 @@ export const initialState: UserInfoState = {
         iban: ''
     },
     paymentDataId: '',
-    error: null
+    error: null,
+    loading: false
 };
 
 export const userInfoReducer = createReducer(
     initialState,
     on(setPersonalInfo, (state, { data }) => ({ ...state, personalInfo: data })),
     on(setAddressInfo, (state, { data }) => ({ ...state, addressInfo: data })),
-    on(setPaymentInfo, (state, { data }) => ({ ...state, paymentInfo: data })),
-    on(paymentRequestSuccess, (state, { paymentDataId }) => ({ ...state, paymentDataId })),
-    on(paymentRequestFailure, (state, { error }) => ({ ...state, error }))
+    on(setPaymentInfo, (state, { data }) => ({ ...state, paymentInfo: data, loading: true })),
+    on(paymentRequestSuccess, (state, { paymentDataId }) => ({ ...state, paymentDataId, loading: false, error: null })),
+    on(paymentRequestFailure, (state, { error }) => ({ ...state, error, loading: false }))
 )
