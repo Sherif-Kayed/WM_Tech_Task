@@ -1,0 +1,11 @@
+{
+  "/personalInfo": {
+    "target": "localhost:3000",
+    "secure": true,
+    "pathRewrite": {
+      "^/personalInfo": "localhost:3000"
+    },
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

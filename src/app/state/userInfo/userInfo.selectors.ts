@@ -9,5 +9,6 @@ export const selectPersonalInfo = createSelector(
 export const selectAddressInfo = createSelector(
     selectUserState, (userState: UserInfoState) => userState.addressInfo
 )
-
-
+export const selectPaymentInfo = createSelector(
+    selectUserState, (userState: UserInfoState) => userState.paymentInfo
+)
