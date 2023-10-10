@@ -2,12 +2,12 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
 
 import { getAddressInfo, setAddressInfo } from '../state/userInfo/userInfo.actions';
-import { PERSONAL_INFO_PAGE } from 'src/constants';
+import { PAYMENT_INFO_PAGE, PERSONAL_INFO_PAGE } from 'src/constants';
 import { selectAddressInfo } from '../state/userInfo/userInfo.selectors';
 import { AppState } from '../state/app.state';
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-address-info',
@@ -50,6 +50,7 @@ export class AddressInfoComponent implements OnInit, OnDestroy {
         city: this.form.value.city!
       }
     }))
+    this.router.navigate([`./${PAYMENT_INFO_PAGE}`]);
   }
 
   onClickBack() {

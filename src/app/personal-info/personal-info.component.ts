@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
 
 import { getPersonalInfo, setPersonalInfo } from '../state/userInfo/userInfo.actions';
 import { ADDRESS_INFO_PAGE } from 'src/constants';
 import { selectPersonalInfo } from '../state/userInfo/userInfo.selectors';
-import { Subject, takeUntil } from 'rxjs';
 import { AppState } from '../state/app.state';
 
 @Component({

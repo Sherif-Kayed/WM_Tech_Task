@@ -9,5 +9,15 @@ export const selectPersonalInfo = createSelector(
 export const selectAddressInfo = createSelector(
     selectUserState, (userState: UserInfoState) => userState.addressInfo
 )
-
-
+export const selectPaymentInfo = createSelector(
+    selectUserState, (userState: UserInfoState) => userState.paymentInfo
+)
+export const selectLoading = createSelector(
+    selectUserState,(userState :UserInfoState)=>  userState.loading
+)
+export const selectPaymentDataId = createSelector(
+    selectUserState, (userState: UserInfoState) => userState.paymentDataId
+)
+export const selectError = createSelector(
+    selectUserState , (userState: UserInfoState )=>   userState.error
+)
