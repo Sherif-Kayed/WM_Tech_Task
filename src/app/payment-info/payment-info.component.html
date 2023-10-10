@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Address Information</h1>
+    <form [formGroup]="form" (ngSubmit)="onClickSubmit()">
+        <div class="form-row">
+            <div class="col-6">
+                <label for="txtAccountOwner">Account Owner</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="txtAccountOwner" 
+                    formControlName="owner"
+                    placeholder="Account Owner"
+                >
+            </div>
+            <div class="col-6">
+                <label for="txtIBAN">IBAN</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="txtIBAN" 
+                    formControlName="iban"
+                    placeholder="IBAN"
+                >
+            </div>
+        </div>
+        <button 
+            type="button" 
+            class="btn btn-primary"
+            (click)="onClickBack()">
+            Back
+        </button>
+        <button 
+            type="submit" 
+            [disabled]="!form.valid" 
+            class="btn btn-primary">
+            Submit
+        </button>
+    </form>
+</div>
