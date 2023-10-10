@@ -1,9 +1,9 @@
 {
   "/personalInfo": {
-    "target": "localhost:3000",
+    "target": "https://37f32cl571.execute-api.eu-central-1.amazonaws.com/",
     "secure": true,
     "pathRewrite": {
-      "^/personalInfo": "localhost:3000"
+      "^/personalInfo": "default/wunderfleet-recruiting-backend-dev-save-payment-data"
     },
     "changeOrigin": true,
     "logLevel": "debug"
